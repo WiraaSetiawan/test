@@ -1,0 +1,123 @@
+<?php
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.20/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header>
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a>Homepage</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <a class="btn btn-ghost normal-case text-xl">NEKOPOI</a>
+    </div>
+  </div>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="card card-side bg-base-100 shadow-xl">
+  <figure><img src="image/long -sui.png" class="w-28 h-48" alt="Movie"/></figure>
+  <div class="card-body">
+    <h2 class="card-title">New movie is released!</h2>
+    <p>Click the button to watch on Jetflix app.</p>
+    <div class="card-actions justify-start">
+      <button class="btn btn-primary">Watch</button>
+    </div>
+  </div>
+
+  <figure><img src="image/long -sui.png" class="w-28 h-48" alt="Movie"/></figure>
+  <div class="card-body">
+    <h2 class="card-title">New movie is released!</h2>
+    <p>Click the button to watch on Jetflix app.</p>
+    <div class="card-actions justify-start">
+      <button class="btn btn-primary">Watch</button>
+    </div>
+  </div>
+
+  <figure><img src="image/long -sui.png" class="w-28 h-48" alt="Movie"/></figure>
+  <div class="card-body">
+    <h2 class="card-title">New movie is released!</h2>
+    <p>Click the button to watch on Jetflix app.</p>
+    <div class="card-actions justify-start">
+      <button class="btn btn-primary">Watch</button>
+    </div>
+  </div>
+  
+</div>
+
+<br>
+<br>
+<!-- 
+<div class="card card-side bg-base-100 shadow-xl">
+  <figure><img src="image/long -sui.png" alt="Movie"/></figure>
+  <div class="card-body">
+    <h2 class="card-title">New movie is released!</h2>
+    <p>Click the button to watch on Jetflix app.</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Watch</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="flex space-x-4">
+  <div class="bg-white rounded-lg p-4 flex">
+    <img src="image/long -sui.png" class="w-32 h-48 rounded" alt="Movie Poster">
+    <div class="ml-4">
+      <h2 class="text-xl font-bold">Judul Film</h2>
+      <p class="text-gray-700 mt-2">Sinopsis film...</p>
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+        Lihat Detail
+      </button>
+    </div>
+  </div>
+  
+  <div class="bg-white rounded-lg p-4 flex">
+    <img src="image/Kimi_No_Na_Wa.jpg" class="w-32 h-48 rounded" alt="Movie Poster">
+    <div class="ml-4">
+      <h2 class="text-xl font-bold">Judul Film</h2>
+      <p class="text-gray-700 mt-2">Sinopsis film...</p>
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+        Lihat Detail
+      </button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<?php
+}else{
+    header("Location: index.php");
+    exit();
+}
+?>
